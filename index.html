@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>算数バトル - サポート / プライバシーポリシー</title>
+<title>算数バトル / Math Battle — Support & Privacy Policy</title>
 <style>
   :root { --accent: #1a3360; }
   * { box-sizing: border-box; }
@@ -12,165 +12,425 @@
     line-height: 1.8; color: #222; margin: 0; padding: 0; background: #f7f8fa;
   }
   .container { max-width: 760px; margin: 0 auto; padding: 24px 20px 80px; }
-  header { background: var(--accent); color: #fff; padding: 32px 20px; text-align: center; }
-  header h1 { margin: 0; font-size: 28px; }
+  header { background: var(--accent); color: #fff; padding: 28px 20px; text-align: center; }
+  header h1 { margin: 0; font-size: 26px; }
   header p { margin: 8px 0 0; opacity: .9; }
-  h2 { color: var(--accent); border-bottom: 2px solid #e1e5ec; padding-bottom: 6px; margin-top: 40px; }
-  h3 { margin-top: 24px; }
+  h2 { color: var(--accent); border-bottom: 2px solid #e1e5ec; padding-bottom: 6px; margin-top: 36px; }
+  h3 { margin-top: 22px; }
   a { color: #1565c0; word-break: break-all; }
   .card { background: #fff; border: 1px solid #e1e5ec; border-radius: 10px; padding: 4px 20px 20px; margin-top: 16px; }
-  nav a { display: inline-block; margin-right: 16px; }
   hr { border: none; border-top: 1px solid #e1e5ec; margin: 32px 0; }
   .muted { color: #777; font-size: 14px; }
   ul { padding-left: 22px; }
+  .langswitch { display: flex; gap: 8px; justify-content: center; margin: 18px 0 4px; flex-wrap: wrap; }
+  .langswitch button {
+    border: 1px solid var(--accent); background: #fff; color: var(--accent);
+    padding: 8px 16px; border-radius: 999px; font-size: 15px; cursor: pointer;
+  }
+  .langswitch button.active { background: var(--accent); color: #fff; }
+  .lang[hidden] { display: none; }
 </style>
 </head>
 <body>
 <header>
-  <h1>算数バトル</h1>
-  <p>サポート / プライバシーポリシー</p>
+  <h1>算数バトル / Math Battle / 산수 배틀</h1>
+  <p>Support &amp; Privacy Policy</p>
 </header>
 
 <div class="container">
 
-  <nav>
-    <a href="#support">サポート・FAQ</a>
-    <a href="#terms">利用規約</a>
-    <a href="#privacy">プライバシーポリシー</a>
-  </nav>
+  <div class="langswitch">
+    <button data-lang="ja" class="active" onclick="setLang('ja')">日本語</button>
+    <button data-lang="en" onclick="setLang('en')">English</button>
+    <button data-lang="ko" onclick="setLang('ko')">한국어</button>
+  </div>
 
-  <section id="support" class="card">
-    <h2>アプリについて</h2>
-    <p><strong>算数バトル</strong>は、計算力とスピードを競うタイムアタック型の教育ゲームアプリです。</p>
-    <h3>主な機能</h3>
-    <ul>
-      <li>3つの難易度レベル: スタンダード、アドバンス、マスター</li>
-      <li>タイムアタック方式: 20問の問題をできるだけ早く解く</li>
-      <li>全国・都道府県別ランキング: プレイヤー同士で競い合える</li>
-      <li>様々な問題: 四則演算、分数、展開・因数分解など</li>
-    </ul>
+  <!-- ========================= 日本語 ========================= -->
+  <div class="lang" id="lang-ja">
+    <section class="card">
+      <h2>アプリについて</h2>
+      <p><strong>算数バトル</strong>は、計算力とスピードを競う教育ゲームアプリです。</p>
+      <h3>主な機能</h3>
+      <ul>
+        <li>3つの難易度: スタンダード / アドバンス / マスター</li>
+        <li>ゲームモード: タイムアタック / スコアアタック / バトルロイヤル（4人早押し対戦）</li>
+        <li>世界ランキング・国別ランキング</li>
+        <li>日本語・英語・韓国語に対応</li>
+      </ul>
 
-    <h2>よくある質問（FAQ）</h2>
-    <h3>Q1. アプリは無料ですか？</h3>
-    <p>A. はい、すべてのレベルを含めて完全無料で遊べます。なお、アプリ内には広告が表示されます。</p>
-    <h3>Q2. マスターレベルとは？</h3>
-    <p>A. 最高難度のレベルで、展開・因数分解などの高度な問題に挑戦できます。無料で遊べます。</p>
-    <h3>Q3. ランキングはどうやって更新されますか？</h3>
-    <p>A. ゲームクリア後、自動的にランキングに登録されます。全国ランキングと都道府県別ランキングの両方で競えます。</p>
-    <h3>Q4. タイマーが「???」になるのはなぜ？</h3>
-    <p>A. 10問目以降、緊張感を高めるためにタイムが隠されます。結果画面では正確なタイムが表示されます。</p>
-    <h3>Q5. ユーザー名は変更できますか？</h3>
-    <p>A. 現在のバージョンでは、初回登録時のみユーザー名を設定できます。変更機能は将来のアップデートで追加予定です。</p>
-    <h3>Q6. オフラインでも遊べますか？</h3>
-    <p>A. ゲーム自体はオフラインでプレイ可能ですが、ランキングの閲覧・登録にはインターネット接続が必要です。</p>
-    <h3>Q7. 対応端末は？</h3>
-    <p>A. iOS 15.0以降を搭載したiPhone、iPadで動作します。</p>
+      <h2>よくある質問（FAQ）</h2>
+      <h3>Q1. アプリは無料ですか？</h3>
+      <p>A. はい、すべて無料で遊べます。なお、アプリ内には広告が表示されます。</p>
+      <h3>Q2. ランキングはどうなっていますか？</h3>
+      <p>A. ゲームクリア後に自動登録され、世界ランキングと、オンボーディングで選んだ国の国別ランキングで競えます。</p>
+      <h3>Q3. 言語や国はどこで設定しますか？</h3>
+      <p>A. 初回のオンボーディングで言語と国を選択します。表示言語はその場で切り替わります。</p>
+      <h3>Q4. バトルロイヤルとは？</h3>
+      <p>A. 最大4人で同じ10問に挑戦し、各問題を一番早く正解した人が得点する早押し対戦モードです（リアルタイム対戦専用）。</p>
+      <h3>Q5. 対応端末は？</h3>
+      <p>A. iOS 15.0以降のiPhone・iPadで動作します。</p>
 
-    <h2>お問い合わせ</h2>
-    <p>アプリに関するご質問、不具合報告、ご要望などがございましたら、以下のメールアドレスまでご連絡ください。</p>
-    <p><strong>メールアドレス</strong>: [あなたのメールアドレス]</p>
-    <p class="muted">※ 返信には数日かかる場合がございます。予めご了承ください。</p>
-  </section>
+      <h2>お問い合わせ</h2>
+      <p>ご質問・不具合報告・ご要望は以下までご連絡ください。</p>
+      <p><strong>メールアドレス</strong>: [あなたのメールアドレス]</p>
+      <p class="muted">※ 返信に数日かかる場合があります。</p>
+    </section>
 
-  <section id="terms" class="card">
-    <h2>利用規約</h2>
-    <h3>1. サービスの利用</h3>
-    <p>本アプリは、教育およびエンターテイメント目的で提供されています。ユーザーは本アプリを適切に利用する責任を負います。</p>
-    <h3>2. 料金と広告</h3>
-    <p>本アプリは無料で提供されています。アプリ内には第三者配信の広告（Google AdMob）が表示されます。</p>
-    <h3>3. ランキング</h3>
-    <p>ランキングに不正な手段で登録された記録は、予告なく削除される場合があります。</p>
-    <h3>4. 免責事項</h3>
-    <p>本アプリの利用により生じたいかなる損害についても、開発者は責任を負いかねます。</p>
-    <h3>5. サービスの変更・終了</h3>
-    <p>開発者は、予告なく本アプリの内容を変更、またはサービスを終了する権利を有します。</p>
-  </section>
+    <section class="card">
+      <h2>利用規約</h2>
+      <h3>1. サービスの利用</h3>
+      <p>本アプリは教育およびエンターテイメント目的で提供されます。ユーザーは適切に利用する責任を負います。</p>
+      <h3>2. 料金と広告</h3>
+      <p>本アプリは無料で提供されます。アプリ内には第三者配信の広告（Google AdMob）が表示されます。</p>
+      <h3>3. ランキング</h3>
+      <p>不正な手段で登録された記録は、予告なく削除される場合があります。</p>
+      <h3>4. 免責事項</h3>
+      <p>本アプリの利用により生じたいかなる損害についても、開発者は責任を負いかねます。</p>
+      <h3>5. サービスの変更・終了</h3>
+      <p>開発者は予告なく内容の変更またはサービスの終了を行う権利を有します。</p>
+    </section>
 
-  <section id="privacy" class="card">
-    <h2>プライバシーポリシー</h2>
-    <p class="muted">最終更新日: 2026年6月</p>
+    <section class="card">
+      <h2>プライバシーポリシー</h2>
+      <p class="muted">最終更新日: 2026年6月</p>
 
-    <h3>1. はじめに</h3>
-    <p>算数バトル（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、本アプリが収集、使用、保護する情報について説明します。</p>
+      <h3>1. はじめに</h3>
+      <p>算数バトル（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本ポリシーは収集・使用・保護する情報を説明します。</p>
 
-    <h3>2. 収集する情報</h3>
-    <p><strong>2.1 ユーザー提供情報</strong></p>
-    <ul>
-      <li>ユーザー名（ニックネーム）: ランキング表示用</li>
-      <li>都道府県: 都道府県別ランキング用</li>
-      <li>ゲームスコア: タイムと記録</li>
-    </ul>
-    <p><strong>2.2 自動収集情報</strong></p>
-    <p>本アプリは、利用状況の分析および広告配信のため、以下の情報を自動的に収集します：</p>
-    <ul>
-      <li>広告識別子（IDFA）およびデバイス識別子</li>
-      <li>IPアドレス、およびそれに基づくおおよその地域</li>
-      <li>端末情報（OSバージョン、端末の種類など）</li>
-      <li>アプリの利用状況（プレイしたレベル、ゲームの開始・クリア、画面の表示など）</li>
-    </ul>
-    <p>これらの情報は、後述のFirebase Analytics（Google）およびGoogle AdMob（Google）によって収集されます。</p>
+      <h3>2. 収集する情報</h3>
+      <p><strong>2.1 ユーザー提供情報</strong></p>
+      <ul>
+        <li>ユーザー名（ニックネーム）: ランキング表示用</li>
+        <li>国: 国別ランキング用</li>
+        <li>ゲームスコア: タイムや記録</li>
+      </ul>
+      <p><strong>2.2 自動収集情報</strong>（利用状況の分析および広告配信のため）</p>
+      <ul>
+        <li>広告識別子（IDFA）およびデバイス識別子</li>
+        <li>IPアドレス、およびそれに基づくおおよその地域</li>
+        <li>端末情報（OSバージョン、端末の種類など）</li>
+        <li>アプリの利用状況（プレイしたレベル、開始・クリア、画面表示など）</li>
+      </ul>
+      <p>これらは Firebase Analytics（Google）および Google AdMob（Google）によって収集されます。</p>
 
-    <h3>3. 情報の使用目的</h3>
-    <ul>
-      <li>ランキング機能の提供: 全国および都道府県別のランキング表示</li>
-      <li>ゲーム記録の保存: ユーザーのベストタイムの記録</li>
-      <li>アプリの改善・分析: 利用状況の分析によるユーザー体験の向上（Firebase Analytics）</li>
-      <li>広告の配信: アプリ内での広告表示およびパーソナライズ（Google AdMob）</li>
-    </ul>
+      <h3>3. 情報の使用目的</h3>
+      <ul>
+        <li>ランキング機能の提供（世界・国別）</li>
+        <li>ゲーム記録の保存</li>
+        <li>利用状況の分析によるアプリ改善（Firebase Analytics）</li>
+        <li>広告の配信およびパーソナライズ（Google AdMob）</li>
+      </ul>
 
-    <h3>4. 情報の共有</h3>
-    <p>本アプリは、以下の場合を除き、ユーザー情報を第三者と共有しません：</p>
-    <ul>
-      <li>ランキング表示: ユーザー名、都道府県、スコアはアプリ内のランキングで他のユーザーに表示されます</li>
-      <li>分析・広告配信: 上記のサードパーティサービス（Google）に対し、分析・広告配信に必要な情報が送信されます</li>
-      <li>法的要請: 法律で義務付けられた場合</li>
-    </ul>
-    <p>ユーザーの個人情報を第三者に販売することは一切ありません。</p>
+      <h3>4. 情報の共有</h3>
+      <ul>
+        <li>ランキング表示: ニックネーム・国・スコアは他のユーザーに表示されます</li>
+        <li>分析・広告: 上記サードパーティ（Google）に必要な情報が送信されます</li>
+        <li>法的要請: 法律で義務付けられた場合</li>
+      </ul>
+      <p>ユーザーの個人情報を第三者に販売することは一切ありません。</p>
 
-    <h3>5. データの保管</h3>
-    <ul>
-      <li>端末内: ユーザー名、都道府県（UserDefaults）</li>
-      <li>クラウド: ランキングデータ（Firebase）。Google Cloud Platformの安全なサーバーに保管され、業界標準のセキュリティ対策が施されています。</li>
-    </ul>
-    <p>ランキングデータはサービス終了まで保持されます。ユーザーはアプリを削除することで、端末内のデータを削除できます。</p>
+      <h3>5. データの保管</h3>
+      <ul>
+        <li>端末内: ニックネーム・国・言語設定</li>
+        <li>クラウド: ランキングデータ（Firebase / Google Cloud Platform）。業界標準のセキュリティ対策が施されています。</li>
+      </ul>
+      <p>ランキングデータはサービス終了まで保持されます。アプリを削除すると端末内のデータは削除されます。</p>
 
-    <h3>6. 子供のプライバシー</h3>
-    <p>本アプリは故意に13歳未満の子供から個人を特定する情報を収集しません。13歳未満の子供が利用する場合は、保護者の監督のもとでの利用を推奨します。</p>
+      <h3>6. 子供のプライバシー</h3>
+      <p>本アプリは故意に13歳未満の子供から個人を特定する情報を収集しません。13歳未満が利用する場合は保護者の監督下での利用を推奨します。</p>
 
-    <h3>7. サードパーティサービス</h3>
-    <p><strong>7.1 Firebase（Google）</strong></p>
-    <ul>
-      <li>目的: ランキングデータの保存、および利用状況の分析（Firebase Analytics）</li>
-      <li>Firebaseのプライバシーとセキュリティ: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-      <li>Googleのプライバシーポリシー: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-    </ul>
-    <p><strong>7.2 Google AdMob（Google）</strong></p>
-    <ul>
-      <li>目的: アプリ内での広告配信。ユーザーの興味に応じた広告（パーソナライズ広告）を表示するため、広告識別子（IDFA）等を使用することがあります。</li>
-      <li>広告のカスタマイズ・オプトアウト: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
-      <li>プライバシーポリシー: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-    </ul>
+      <h3>7. サードパーティサービス</h3>
+      <p><strong>7.1 Firebase（Google）</strong> — ランキング保存・利用状況の分析</p>
+      <ul>
+        <li><a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+        <li><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      </ul>
+      <p><strong>7.2 Google AdMob</strong> — 広告配信（IDFA等を使用したパーソナライズ広告を含む）</p>
+      <ul>
+        <li>広告のオプトアウト: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+      </ul>
 
-    <h3>8. ユーザーの権利</h3>
-    <p>ユーザーは、自分のデータへのアクセス、削除（アプリの削除による）、使用への異議申し立ての権利を有します。ランキングから自分のデータを削除したい場合は、お問い合わせください。</p>
+      <h3>8. ユーザーの権利</h3>
+      <p>自分のデータへのアクセス、削除（アプリの削除による）、使用への異議申し立ての権利があります。ランキングからの削除を希望する場合はお問い合わせください。</p>
 
-    <h3>9. トラッキングと広告識別子</h3>
-    <p>本アプリは、Google AdMobによる広告配信およびFirebase Analyticsによる分析のため、広告識別子（IDFA）等のトラッキング技術を使用することがあります。</p>
-    <p>iOSでは、アプリの初回起動時に「トラッキングの許可」を求めるダイアログが表示されます。許可しない場合でも本アプリは利用できますが、表示される広告がユーザーの興味に最適化されない場合があります。</p>
-    <p>トラッキングの設定は、端末の「設定」＞「プライバシーとセキュリティ」＞「トラッキング」からいつでも変更できます。</p>
+      <h3>9. トラッキングと広告識別子</h3>
+      <p>本アプリは広告配信・分析のため広告識別子（IDFA）等のトラッキング技術を使用することがあります。iOSでは初回起動時に「トラッキングの許可」を求めます。許可しなくても利用可能ですが、広告が最適化されない場合があります。設定は「設定 ＞ プライバシーとセキュリティ ＞ トラッキング」から変更できます。</p>
 
-    <h3>10. プライバシーポリシーの変更</h3>
-    <p>本プライバシーポリシーは、法律の変更やアプリの機能追加に伴い更新される場合があります。重要な変更がある場合は、アプリ内または本ページで通知します。</p>
+      <h3>10. ポリシーの変更</h3>
+      <p>本ポリシーは法律の変更や機能追加に伴い更新される場合があります。重要な変更は本ページで通知します。</p>
 
-    <h3>11. お問い合わせ</h3>
-    <p>プライバシーに関するご質問、懸念事項がある場合は、以下までご連絡ください：</p>
-    <p><strong>メールアドレス</strong>: [あなたのメールアドレス]</p>
+      <h3>11. お問い合わせ</h3>
+      <p><strong>メールアドレス</strong>: [あなたのメールアドレス]</p>
 
-    <hr>
-    <p class="muted">発行日: 2025年1月 / 最終更新: 2026年6月 / バージョン: 1.1</p>
-    <p class="muted">&copy; 2025 算数バトル. All rights reserved.</p>
-  </section>
+      <hr>
+      <p class="muted">発行日: 2025年1月 / 最終更新: 2026年6月</p>
+      <p class="muted">&copy; 2025 算数バトル. All rights reserved.</p>
+    </section>
+  </div>
+
+  <!-- ========================= English ========================= -->
+  <div class="lang" id="lang-en" hidden>
+    <section class="card">
+      <h2>About the App</h2>
+      <p><strong>Math Battle</strong> is an educational game where you compete on calculation skill and speed.</p>
+      <h3>Features</h3>
+      <ul>
+        <li>3 difficulty levels: Standard / Advance / Master</li>
+        <li>Modes: Time Attack / Score Attack / Battle Royale (4-player buzzer match)</li>
+        <li>World ranking and country ranking</li>
+        <li>Available in Japanese, English and Korean</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <h3>Q1. Is the app free?</h3>
+      <p>A. Yes, everything is free to play. The app shows ads.</p>
+      <h3>Q2. How do rankings work?</h3>
+      <p>A. Your result is registered automatically after each game. You compete on the world ranking and on the ranking of the country you chose during onboarding.</p>
+      <h3>Q3. Where do I set language and country?</h3>
+      <p>A. You choose your language and country in the first-time onboarding. The display language switches immediately.</p>
+      <h3>Q4. What is Battle Royale?</h3>
+      <p>A. Up to 4 players take on the same 10 questions; whoever answers each question correctly first scores the point (real-time online mode only).</p>
+      <h3>Q5. Which devices are supported?</h3>
+      <p>A. iPhone and iPad running iOS 15.0 or later.</p>
+
+      <h2>Contact</h2>
+      <p>For questions, bug reports or requests, please contact us:</p>
+      <p><strong>Email</strong>: [your email address]</p>
+      <p class="muted">* It may take a few days to reply.</p>
+    </section>
+
+    <section class="card">
+      <h2>Terms of Use</h2>
+      <h3>1. Use of the Service</h3>
+      <p>This app is provided for educational and entertainment purposes. Users are responsible for using it appropriately.</p>
+      <h3>2. Pricing and Ads</h3>
+      <p>This app is provided free of charge. It displays third-party ads (Google AdMob).</p>
+      <h3>3. Rankings</h3>
+      <p>Records registered by fraudulent means may be removed without notice.</p>
+      <h3>4. Disclaimer</h3>
+      <p>The developer is not liable for any damages arising from the use of this app.</p>
+      <h3>5. Changes / Termination</h3>
+      <p>The developer may change the content or terminate the service without notice.</p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: June 2026</p>
+
+      <h3>1. Introduction</h3>
+      <p>Math Battle ("the App") respects your privacy. This policy explains what information we collect, use and protect.</p>
+
+      <h3>2. Information We Collect</h3>
+      <p><strong>2.1 Information you provide</strong></p>
+      <ul>
+        <li>Username (nickname): for ranking display</li>
+        <li>Country: for the country ranking</li>
+        <li>Game scores: times and records</li>
+      </ul>
+      <p><strong>2.2 Automatically collected information</strong> (for analytics and advertising)</p>
+      <ul>
+        <li>Advertising identifier (IDFA) and device identifiers</li>
+        <li>IP address and the approximate (coarse) location derived from it</li>
+        <li>Device information (OS version, device type, etc.)</li>
+        <li>Usage data (levels played, game start/finish, screens viewed, etc.)</li>
+      </ul>
+      <p>This information is collected by Firebase Analytics (Google) and Google AdMob (Google).</p>
+
+      <h3>3. How We Use Information</h3>
+      <ul>
+        <li>Provide rankings (world and country)</li>
+        <li>Save game records</li>
+        <li>Improve the app through usage analytics (Firebase Analytics)</li>
+        <li>Serve and personalize ads (Google AdMob)</li>
+      </ul>
+
+      <h3>4. Sharing of Information</h3>
+      <ul>
+        <li>Ranking display: nickname, country and score are shown to other users</li>
+        <li>Analytics / ads: necessary data is sent to the third parties above (Google)</li>
+        <li>Legal requirements: when required by law</li>
+      </ul>
+      <p>We never sell your personal information to third parties.</p>
+
+      <h3>5. Data Storage</h3>
+      <ul>
+        <li>On device: nickname, country, language preference</li>
+        <li>Cloud: ranking data (Firebase / Google Cloud Platform) with industry-standard security.</li>
+      </ul>
+      <p>Ranking data is retained until the service ends. Deleting the app removes on-device data.</p>
+
+      <h3>6. Children's Privacy</h3>
+      <p>We do not knowingly collect personally identifiable information from children under 13. Use by children under 13 should be supervised by a guardian.</p>
+
+      <h3>7. Third-Party Services</h3>
+      <p><strong>7.1 Firebase (Google)</strong> — ranking storage and usage analytics</p>
+      <ul>
+        <li><a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+        <li><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      </ul>
+      <p><strong>7.2 Google AdMob</strong> — advertising, including personalized ads using IDFA, etc.</p>
+      <ul>
+        <li>Ad opt-out: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+      </ul>
+
+      <h3>8. Your Rights</h3>
+      <p>You may access your data, delete it (by deleting the app), and object to its use. To remove your data from the rankings, please contact us.</p>
+
+      <h3>9. Tracking and Advertising Identifiers</h3>
+      <p>The app may use tracking technologies such as the advertising identifier (IDFA) for advertising and analytics. On iOS, a "tracking permission" prompt is shown at first launch. You can use the app without allowing it, but ads may be less relevant. You can change this in Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
+
+      <h3>10. Changes to This Policy</h3>
+      <p>This policy may be updated as laws or features change. Material changes will be announced on this page.</p>
+
+      <h3>11. Contact</h3>
+      <p><strong>Email</strong>: [your email address]</p>
+
+      <hr>
+      <p class="muted">Issued: January 2025 / Last updated: June 2026</p>
+      <p class="muted">&copy; 2025 Math Battle. All rights reserved.</p>
+    </section>
+  </div>
+
+  <!-- ========================= 한국어 ========================= -->
+  <div class="lang" id="lang-ko" hidden>
+    <section class="card">
+      <h2>앱 소개</h2>
+      <p><strong>산수 배틀</strong>은 계산 실력과 속도를 겨루는 교육용 게임 앱입니다.</p>
+      <h3>주요 기능</h3>
+      <ul>
+        <li>3가지 난이도: 스탠다드 / 어드밴스 / 마스터</li>
+        <li>모드: 타임 어택 / 스코어 어택 / 배틀로얄(4인 빨리 누르기 대결)</li>
+        <li>세계 랭킹 및 국가별 랭킹</li>
+        <li>일본어·영어·한국어 지원</li>
+      </ul>
+
+      <h2>자주 묻는 질문(FAQ)</h2>
+      <h3>Q1. 앱은 무료인가요?</h3>
+      <p>A. 네, 모두 무료로 즐길 수 있습니다. 앱 내에 광고가 표시됩니다.</p>
+      <h3>Q2. 랭킹은 어떻게 되나요?</h3>
+      <p>A. 게임 종료 후 자동으로 등록되며, 세계 랭킹과 온보딩에서 선택한 국가의 국가별 랭킹에서 경쟁합니다.</p>
+      <h3>Q3. 언어와 국가는 어디서 설정하나요?</h3>
+      <p>A. 첫 온보딩에서 언어와 국가를 선택합니다. 표시 언어는 즉시 전환됩니다.</p>
+      <h3>Q4. 배틀로얄이란?</h3>
+      <p>A. 최대 4명이 같은 10문제에 도전하여, 각 문제를 가장 먼저 맞힌 사람이 득점하는 빨리 누르기 대결 모드입니다(실시간 온라인 전용).</p>
+      <h3>Q5. 지원 기기는?</h3>
+      <p>A. iOS 15.0 이상의 iPhone·iPad에서 동작합니다.</p>
+
+      <h2>문의</h2>
+      <p>질문·버그 신고·요청은 아래로 연락해 주세요.</p>
+      <p><strong>이메일</strong>: [이메일 주소]</p>
+      <p class="muted">※ 답변에 며칠이 걸릴 수 있습니다.</p>
+    </section>
+
+    <section class="card">
+      <h2>이용약관</h2>
+      <h3>1. 서비스 이용</h3>
+      <p>본 앱은 교육 및 엔터테인먼트 목적으로 제공됩니다. 이용자는 적절히 사용할 책임이 있습니다.</p>
+      <h3>2. 요금과 광고</h3>
+      <p>본 앱은 무료로 제공됩니다. 앱 내에 제3자 광고(Google AdMob)가 표시됩니다.</p>
+      <h3>3. 랭킹</h3>
+      <p>부정한 방법으로 등록된 기록은 예고 없이 삭제될 수 있습니다.</p>
+      <h3>4. 면책</h3>
+      <p>본 앱 이용으로 발생한 어떠한 손해에 대해서도 개발자는 책임지지 않습니다.</p>
+      <h3>5. 변경·종료</h3>
+      <p>개발자는 예고 없이 내용을 변경하거나 서비스를 종료할 권리가 있습니다.</p>
+    </section>
+
+    <section class="card">
+      <h2>개인정보 처리방침</h2>
+      <p class="muted">최종 업데이트: 2026년 6월</p>
+
+      <h3>1. 개요</h3>
+      <p>산수 배틀(이하 "본 앱")은 이용자의 개인정보를 존중합니다. 본 방침은 수집·이용·보호하는 정보를 설명합니다.</p>
+
+      <h3>2. 수집하는 정보</h3>
+      <p><strong>2.1 이용자가 제공하는 정보</strong></p>
+      <ul>
+        <li>사용자 이름(닉네임): 랭킹 표시용</li>
+        <li>국가: 국가별 랭킹용</li>
+        <li>게임 점수: 기록과 시간</li>
+      </ul>
+      <p><strong>2.2 자동으로 수집되는 정보</strong>(분석 및 광고 게재 목적)</p>
+      <ul>
+        <li>광고 식별자(IDFA) 및 기기 식별자</li>
+        <li>IP 주소 및 이를 바탕으로 한 대략적인 지역</li>
+        <li>기기 정보(OS 버전, 기기 종류 등)</li>
+        <li>앱 사용 현황(플레이한 레벨, 시작·종료, 화면 표시 등)</li>
+      </ul>
+      <p>이 정보는 Firebase Analytics(Google) 및 Google AdMob(Google)에 의해 수집됩니다.</p>
+
+      <h3>3. 정보의 이용 목적</h3>
+      <ul>
+        <li>랭킹 기능 제공(세계·국가별)</li>
+        <li>게임 기록 저장</li>
+        <li>사용 현황 분석을 통한 앱 개선(Firebase Analytics)</li>
+        <li>광고 게재 및 개인화(Google AdMob)</li>
+      </ul>
+
+      <h3>4. 정보의 공유</h3>
+      <ul>
+        <li>랭킹 표시: 닉네임·국가·점수가 다른 이용자에게 표시됩니다</li>
+        <li>분석·광고: 위 제3자(Google)에게 필요한 정보가 전송됩니다</li>
+        <li>법적 요청: 법률로 의무화된 경우</li>
+      </ul>
+      <p>이용자의 개인정보를 제3자에게 판매하지 않습니다.</p>
+
+      <h3>5. 데이터 보관</h3>
+      <ul>
+        <li>기기 내: 닉네임·국가·언어 설정</li>
+        <li>클라우드: 랭킹 데이터(Firebase / Google Cloud Platform), 업계 표준 보안 적용.</li>
+      </ul>
+      <p>랭킹 데이터는 서비스 종료 시까지 보관됩니다. 앱을 삭제하면 기기 내 데이터는 삭제됩니다.</p>
+
+      <h3>6. 아동의 개인정보</h3>
+      <p>본 앱은 만 13세 미만 아동으로부터 개인 식별 정보를 고의로 수집하지 않습니다. 만 13세 미만이 이용할 경우 보호자의 감독하에 이용을 권장합니다.</p>
+
+      <h3>7. 제3자 서비스</h3>
+      <p><strong>7.1 Firebase(Google)</strong> — 랭킹 저장 및 사용 현황 분석</p>
+      <ul>
+        <li><a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+        <li><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      </ul>
+      <p><strong>7.2 Google AdMob</strong> — 광고 게재(IDFA 등을 사용한 개인화 광고 포함)</p>
+      <ul>
+        <li>광고 옵트아웃: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+      </ul>
+
+      <h3>8. 이용자의 권리</h3>
+      <p>본인 데이터에 대한 접근, 삭제(앱 삭제를 통한), 이용에 대한 이의 제기 권리가 있습니다. 랭킹에서 데이터 삭제를 원하시면 문의해 주세요.</p>
+
+      <h3>9. 트래킹 및 광고 식별자</h3>
+      <p>본 앱은 광고 및 분석을 위해 광고 식별자(IDFA) 등의 트래킹 기술을 사용할 수 있습니다. iOS에서는 첫 실행 시 "트래킹 허용" 요청이 표시됩니다. 허용하지 않아도 이용할 수 있으나 광고가 최적화되지 않을 수 있습니다. 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 변경할 수 있습니다.</p>
+
+      <h3>10. 방침의 변경</h3>
+      <p>본 방침은 법률 변경이나 기능 추가에 따라 업데이트될 수 있습니다. 중요한 변경 사항은 본 페이지에 공지합니다.</p>
+
+      <h3>11. 문의</h3>
+      <p><strong>이메일</strong>: [이메일 주소]</p>
+
+      <hr>
+      <p class="muted">발행일: 2025년 1월 / 최종 업데이트: 2026년 6월</p>
+      <p class="muted">&copy; 2025 산수 배틀. All rights reserved.</p>
+    </section>
+  </div>
 
 </div>
+
+<script>
+  function setLang(lang) {
+    ['ja', 'en', 'ko'].forEach(function (l) {
+      document.getElementById('lang-' + l).hidden = (l !== lang);
+      var btn = document.querySelector('.langswitch button[data-lang="' + l + '"]');
+      if (btn) btn.classList.toggle('active', l === lang);
+    });
+    document.documentElement.lang = lang;
+  }
+  // 端末の言語に合わせて初期表示（ja/en/ko）
+  (function () {
+    var nav = (navigator.language || 'ja').toLowerCase();
+    var initial = nav.indexOf('ko') === 0 ? 'ko' : (nav.indexOf('ja') === 0 ? 'ja' : 'en');
+    setLang(initial);
+  })();
+</script>
 </body>
 </html>
